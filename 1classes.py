@@ -44,20 +44,16 @@ class Picture:
 
         self.image = Image.open(self.path)
 
-
     @property
     def width(self):
         return self.image.width
-
 
     @property
     def pixel(self, x, y):
         return self.pixels[(x, y)]
 
-
     def pixel_init(self):
         self.pixels = self.converted.load()
-
 
     def convert(self):
 
@@ -71,13 +67,12 @@ class Picture:
 
     def magic(self):
 
-
-    @staticmethod
-    def get_color(raw):
-        color = '#'
-        for value in raw[:3]:
-            color += str(hex(int(value)))[-2:].replace('x', '0')
-        return color.upper()
+        @staticmethod
+        def get_color(raw):
+            color = '#'
+            for value in raw[:3]:
+                color += str(hex(int(value)))[-2:].replace('x', '0')
+            return color.upper()
 
 
 class GIF(Picture):

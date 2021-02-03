@@ -1,3 +1,7 @@
-def title():
+from os import system
+
+
+def print_title():
+
     system("cls")
-    print('\n  NeverMindMythicPicture v3.0\n  Author: Zyyans, Hodo7am.')
+    print("\n  NeverMindMythicPictures 3.0\n  Author: Zyyans, Hodo7am")
